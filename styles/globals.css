@@ -16,7 +16,7 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-primary-100 dark:bg-primary-300;
+    @apply bg-primary-300;
   }
   a {
     color: inherit;
@@ -48,7 +48,7 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-gradient-to-br from-primary to-gray-300 dark:to-dark-300 rounded-full;
+    @apply bg-gradient-to-br from-primary to-primary-300 rounded-full;
   }
   ::-webkit-scrollbar {
     @apply w-2 h-px bg-primary-300;

@@ -36,6 +36,9 @@ const Home: NextPage = () => {
           property="og:title"
           content="Oluwayelu Ifeoluwa | Portfolio"
         ></meta>
+        <meta name="theme-color" content="#0F1642" />
+        <meta name="msapplication-navbutton-color" content="#0F1642" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="#0F1642" />
       </Head>
       <div
         className="relative w-full min-h-screen font-poppins bg-cover bg-center"

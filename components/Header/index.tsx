@@ -28,7 +28,7 @@ const Header: FunctionComponent = () => {
       custom={"200px"}
       ref={containerRef}
       className={`${
-        y >= 50 ? "bg-blue-300 dark:bg-dark-300" : "bg-transparent"
+        y >= 50 ? "bg-primary-300" : "bg-transparent"
       }  fixed top-0 left-0 right-0 flex justify-center z-50`}
     >
       {/* <DotNav /> */}
