@@ -4,7 +4,7 @@ import Project, { ProjectProps } from "./Project";
 import Technologies, { TechnologiesProps } from "./Technologies";
 type Props = {
   type?: "project" | "technologies";
-  data: IProject | ITechnologies;
+  data: any;
 };
 
 const Card: FunctionComponent<Props> = ({ type, data }) => {
