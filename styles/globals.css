@@ -16,7 +16,7 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-primary-300;
+    @apply bg-primary-300 text-white;
   }
   a {
     color: inherit;
