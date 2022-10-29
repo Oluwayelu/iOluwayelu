@@ -3,11 +3,13 @@ import type { IconType } from "react-icons";
 
 export type Category =
   | "all"
+  | "html"
+  | "css"
+  | "javascript"
+  | "typescript"
   | "react"
   | "next"
   | "node"
-  | "html"
-  | "css"
   | "mongodb"
   | "firebase"
   | "tailwindcss"
@@ -36,7 +38,7 @@ export interface IDetails {
   position: string;
   location?: string;
   description: string;
-  startDate: string;
+  startDate?: string;
   endDate?: string;
 }
 
@@ -49,6 +51,11 @@ export interface ISkill {
 export interface Target extends Element {
   name: string;
   value: string;
+}
+
+export interface IForm {
+  state?: "loading" | "error" | "success";
+  message?: string;
 }
 
 // export interface IChangeEventHandler extends ChangeEventHandler<Target>

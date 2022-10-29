@@ -1,6 +1,6 @@
 {
-  "name": "my-portfolio",
-  "version": "0.1.0",
+  "name": "ioluwayelu",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -12,6 +12,7 @@
     "framer-motion": "^6.3.3",
     "next": "12.1.5",
     "next-themes": "^0.1.1",
+    "nodemailer": "^6.8.0",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-icons": "^4.3.1",
@@ -19,6 +20,7 @@
   },
   "devDependencies": {
     "@types/node": "17.0.30",
+    "@types/nodemailer": "^6.4.6",
     "@types/react": "18.0.8",
     "@types/react-dom": "18.0.3",
     "autoprefixer": "^10.4.5",

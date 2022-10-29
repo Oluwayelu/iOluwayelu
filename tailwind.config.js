@@ -30,6 +30,7 @@ module.exports = {
           100: "#CBCBCB",
         },
         error: "#E02020",
+        success: "#6CC070",
         warning: "#F7B500",
       },
     },

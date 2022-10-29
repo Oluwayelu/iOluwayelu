@@ -1,14 +1,18 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useState } from "react";
-import { social } from "routes";
-import { Input } from "components";
 import { MdLocationOn } from "react-icons/md";
 import { FiPhoneCall, FiMail } from "react-icons/fi";
+
+import { social } from "routes";
+import { Input } from "components";
+import { useNotification } from "context";
 
 import type { Target } from "interface";
 import type { ChangeEventHandler, FunctionComponent } from "react";
 
 const Contact: FunctionComponent = () => {
+  const { setMessage, setType } = useNotification();
+  const [loading, setLoading] = useState(false);
   const [info, setInfo] = useState({
     name: "",
     email: "",
@@ -25,9 +29,44 @@ const Contact: FunctionComponent = () => {
   const notEmpty =
     name !== "" && email !== "" && title !== "" && message !== "";
 
-  const handleSubmit = () => {
+  const handleSubmit = async (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+
     if (notEmpty) {
-      console.log(info);
+      setLoading(true);
+      try {
+        const res = await fetch("/api/contact", {
+          method: "POST",
+          body: JSON.stringify(info),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+
+        const { error } = await res.json();
+        if (error) {
+          console.log(error);
+          setType("error");
+          setMessage(error);
+
+          return;
+        }
+
+        setType("success");
+        setMessage("Your message was sent successfully");
+        setLoading(false);
+
+        setInfo({
+          name: "",
+          email: "",
+          title: "",
+          message: "",
+        });
+      } catch (error) {
+        setType("error");
+        setMessage("Something went wrong");
+        setLoading(false);
+      }
     }
   };
 
@@ -91,7 +130,7 @@ const Contact: FunctionComponent = () => {
             </ul>
           </div>
 
-          <div className="w-full space-y-3">
+          <form onSubmit={handleSubmit} className="w-full space-y-3">
             <div className="w-full flex flex-col lg:flex-row lg:space-x-4">
               <Input
                 name="name"
@@ -137,9 +176,9 @@ const Contact: FunctionComponent = () => {
               disabled={!notEmpty}
               className="lg:hidden px-10 h-12 text-xl font-medium bg-primary rounded disabled:bg-primary/70"
             >
-              Send
+              {loading ? "Sending" : "Send"}
             </button>
-          </div>
+          </form>
         </div>
       </div>
 

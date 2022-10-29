@@ -13,20 +13,19 @@ const Details: FunctionComponent<Props> = ({
   detail: { startDate, endDate, organization, position, location, description },
 }) => {
   return (
-    <Tooltip message={description}>
-      <div
-        className={`${
-          align === "end" && "lg:items-end"
-        } w-full flex flex-col flex-none snap-start whitespace-nowrap`}
-      >
-        <h3>{organization}</h3>
-        <h4 className="text-primary-100">
-          {startDate} - {endDate ? endDate : "Present"}
-        </h4>
-        <p className="text-sm lg:text-base">{position}</p>
-        <span className="text-sm lg:text-base text-white">{location}</span>
-      </div>
-    </Tooltip>
+    <div
+      className={`${
+        align === "end" && "lg:items-end"
+      } py-1 lg:w-full flex flex-col flex-none snap-start whitespace-nowrap`}
+    >
+      <h3>{organization}</h3>
+      <h4 className="text-primary-100">
+        {startDate && <span>{startDate} - </span>}
+        {endDate ? endDate : "Present"}
+      </h4>
+      <p className="text-sm lg:text-base">{position}</p>
+      <span className="text-sm lg:text-base text-white">{location}</span>
+    </div>
   );
 };
 

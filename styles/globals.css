@@ -1,4 +1,4 @@
-  @tailwind base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -26,6 +26,7 @@
 
   h1 {
     background: linear-gradient(121.57deg, #ffffff 18.77%, #3b82f6 60.15%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     @apply text-3xl md:text-6xl font-black;
@@ -102,6 +103,7 @@
 
   .title {
     background: linear-gradient(121.57deg, #ffffff 18.77%, #32c5ff 60.15%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }

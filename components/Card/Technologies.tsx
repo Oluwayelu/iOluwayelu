@@ -16,9 +16,11 @@ const Technologies: FunctionComponent<TechnologiesProps> = ({
       transition={{ duration: 0.7, ease: "easeInOut" }}
       className="w-full p-3 bg-gray-100/50 rounded-xl flex items-start"
     >
-      <div className="w-1/4 flex items-center justify-center">
-        <Icon className="w-14 h-14" />
-      </div>
+      {Icon && (
+        <div className="w-1/4 flex items-center justify-center">
+          <Icon className="w-14 h-14" />
+        </div>
+      )}
 
       <div className="w-3/4 flex flex-col items-start">
         <h2>{title}</h2>

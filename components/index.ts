@@ -10,3 +10,4 @@ export { default as Bar } from "./Bar";
 export { default as Fab } from "./Fab";
 export { default as Tooltip } from "./Tooltip";
 export { default as Details } from "./Details";
+export { default as Notification } from "./Notification";

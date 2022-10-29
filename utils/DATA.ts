@@ -7,9 +7,10 @@ export const projects: IProject[] = [
     id: 1,
     name: "Easeit",
     image: "/images/easeit.jpg",
-    description: "A weather app built with react js",
+    description:
+      "Easit is a Non Profit organisation that helps the needy during the Covid Pandemic",
     category: ["html", "css", "node"],
-    tags: ["HTML", "Non profit"],
+    tags: ["HTML", "Non-Profit"],
   },
   {
     id: 2,
@@ -17,27 +18,28 @@ export const projects: IProject[] = [
     image: "/images/netflix.jpg",
     link: "https://ynetflix.netlify.app",
     code: "https://github.com/Oluwayelu/weather-app",
-    description: "A weather app built with react js",
-    category: ["next", "styled-component"],
+    description:
+      "Netflix clone built with Next JS for the client and Firebase as the backend",
+    category: ["next", "styled-component", "firebase"],
     tags: ["Next", "Framer Motion", "Styled-components"],
   },
   {
     id: 3,
-    name: "Old Portfolio",
-    image: "/images/portfolio.jpg",
-    code: "https://github.com/Oluwayelu/my-portfolio",
-    description:
-      "A weather app built with react js suabsi absasbaisba xugzxbudbudu uxbsyc sc uvc cvc vz vszd dc sda s",
-    category: ["next", "tailwindcss"],
-    tags: ["Next", "Framer Motion", "Styled-components"],
+    name: "Puzzles",
+    image: "/images/puzzles.jpg",
+    link: "https://puzzles.netlify.app",
+    code: "https://github.com/Oluwayelu/puzzles",
+    description: "A Picture Puzzle game",
+    category: ["react", "tailwindcss"],
+    tags: ["React", "Styled-components"],
   },
   {
     id: 4,
     name: "Accessoriess Hubb",
     image: "/images/accessories-hubb.jpg",
-    description: "A weather app built with react js",
-    category: ["next", "react", "tailwindcss", "mongodb"],
-    tags: ["Next", "Framer Motion", "Styled-components"],
+    description: "An Ecommerce Store for Phone/Computer Accessories",
+    category: ["next", "react", "tailwindcss", "mongodb", "node"],
+    tags: ["Next", "Framer Motion", "Tailwind CSS"],
   },
   {
     id: 5,
@@ -59,6 +61,27 @@ export const projects: IProject[] = [
       "Snaple is a snake game where the snake has to eat an apple while avoiding the walls.",
     category: ["react", "tailwindcss"],
     tags: ["React", "JavaScript", "TailwindCSS"],
+  },
+  {
+    id: 7,
+    name: "For.",
+    image: "/images/for.jpg",
+    link: "https://yfor.netlify.app",
+    code: "https://github.com/Oluwayelu/For.",
+    description: "For. is a women fasion website",
+    category: ["next", "tailwindcss", "typescript"],
+    tags: ["React", "TypeScript", "TailwindCSS"],
+  },
+  {
+    id: 8,
+    name: "Casecraft",
+    image: "/images/casecraft.jpg",
+    link: "https://ycasecraft.netlify.app",
+    code: "https://github.com/Oluwayelu/casecraft",
+    description:
+      "Casecraft is a store where you can design and make spectacular cases for your gadgets.",
+    category: ["next", "tailwindcss", "typescript"],
+    tags: ["React", "TypeScript", "TailwindCSS"],
   },
 ];
 
@@ -82,15 +105,23 @@ export const technologies: ITechnologies[] = [
 
 export const educations: IDetails[] = [
   {
-    startDate: "Nov, 2017",
+    endDate: "Expected May, 2023",
     organization: "Univeristy of Lagos",
-    position: "BSc. Systems Engineerinng",
+    position: "BSc. Systems Engineering",
     location: "Lagos, Nigeria",
     description: "Major in Artificial Intelligence and Robotics",
   },
 ];
 
 export const experiences: IDetails[] = [
+  {
+    startDate: "Oct, 2021",
+    organization: "United States of Africa",
+    position: "Frontend Engineering Lead",
+    location: "Plano, Texas(Remote)",
+    description:
+      "Mentored a team of 6 frontend developers to build and deliver the frontend infrastructure of a videoconferencing and live streaming application built with React.js",
+  },
   {
     startDate: "May, 2019",
     organization: "Freelance",
@@ -106,19 +137,10 @@ export const experiences: IDetails[] = [
     location: "Lagos, Nigeria",
     description: "Major in Artificial Intelligence and Robotics",
   },
-  {
-    startDate: "Oct, 2021",
-    organization: "United States of Africa",
-    position: "Frontend Engineering Lead",
-    location: "Plano, Texas(Remote)",
-    description:
-      "Mentored a team of 6 frontend developers to build and deliver the frontend infrastructure of a videoconferencing and live streaming application built with React.js",
-  },
 ];
 
 export const skills: ISkill[] = [
   {
-    Icon: FaReact,
     title: "React",
     perct: 90,
   },
@@ -127,7 +149,6 @@ export const skills: ISkill[] = [
     perct: 90,
   },
   {
-    Icon: FaReact,
     title: "Python",
     perct: 90,
   },
@@ -137,7 +158,6 @@ export const skills: ISkill[] = [
   },
 
   {
-    Icon: FaReact,
     title: "Next",
     perct: 80,
   },
@@ -146,7 +166,6 @@ export const skills: ISkill[] = [
     perct: 75,
   },
   {
-    Icon: FaReact,
     title: "JavaScript",
     perct: 80,
   },
@@ -156,7 +175,6 @@ export const skills: ISkill[] = [
   },
 
   {
-    Icon: FaReact,
     title: "HTML5",
     perct: 85,
   },
@@ -165,7 +183,6 @@ export const skills: ISkill[] = [
     perct: 65,
   },
   {
-    Icon: FaReact,
     title: "Typescript",
     perct: 70,
   },
@@ -175,7 +192,6 @@ export const skills: ISkill[] = [
   },
 
   {
-    Icon: FaReact,
     title: "CSS",
     perct: 85,
   },
@@ -184,7 +200,6 @@ export const skills: ISkill[] = [
     perct: 70,
   },
   {
-    Icon: FaReact,
     title: "Mongo DB",
     perct: 80,
   },
@@ -194,7 +209,6 @@ export const skills: ISkill[] = [
   },
 
   {
-    Icon: FaReact,
     title: "postgreSQL",
     perct: 60,
   },
@@ -208,7 +222,6 @@ export const skills: ISkill[] = [
   },
 
   {
-    Icon: FaReact,
     title: "Docker",
     perct: 40,
   },

@@ -17,7 +17,7 @@ const About: FunctionComponent = () => {
 
       <div className="w-full flex flex-col lg:flex-row items-center lg:items-start justify-center space-y-3 lg:space-y-0 lg:space-x-3">
         <div className="w-full lg:w-1/3 inline-flex justify-center">
-          <div className="relative w-40 h-40 lg:w-60 lg:h-60 rounded-xl overflow-hidden">
+          <div className="relative w-40 h-40 lg:w-60 lg:h-60 rounded-full overflow-hidden">
             <Image
               src="/images/ifeoluwa.jpg"
               alt="Ifeoluwa"
@@ -40,7 +40,7 @@ const About: FunctionComponent = () => {
       </div>
 
       <div className="w-full lg:max-w-5xl lg:mx-auto lg:px-10 mt-5 lg:mt-10 flex flex-col lg:flex-row justify-between space-y-5 lg:space-y-0">
-        <div className="w-full flex flex-col lg:items-start space-y-3">
+        <div className="w-full flex flex-col lg:items-start space-y-5">
           <h2>Experience</h2>
 
           <div className="w-full flex lg:flex-col flex-shrink-0 items-start overflow-x-auto scroll-p-5 snap-x scroll-smooth cursor-pointer space-x-5 space-y-0 lg:space-x-0 lg:space-y-3">
@@ -51,7 +51,7 @@ const About: FunctionComponent = () => {
           </div>
         </div>
 
-        <div className="w-full flex flex-col lg:items-end space-y-3">
+        <div className="w-full flex flex-col lg:items-end space-y-5">
           <h2>Education</h2>
 
           <div className="w-full flex lg:flex-col flex-shrink-0 items-start overflow-x-auto scroll-p-5 snap-x scroll-smooth cursor-pointer space-x-5 space-y-0 lg:space-x-0 lg:space-y-3">

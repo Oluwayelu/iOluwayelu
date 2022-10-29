@@ -79,18 +79,18 @@ const Home: FunctionComponent = () => {
           transition={{ duration: 0.8 }}
           className="w-full h-full flex flex-col justify-center items-center md:items-end space-y-2"
         >
-          <h2>Hi, my name is</h2>
+          <h2>👋 Hi, my name is</h2>
           <h1>Oluwayelu Ifeoluwa</h1>
 
-          <p>I am a Software Engineer</p>
+          <p>Software Engineer</p>
 
           <Link href="/doc/Ifeoluwa Oluwayelu Resume.pdf">
             <a
               target="_blank"
               download="Ifeoluwa Oluwayelu Resume.pdf"
-              className="inline-flex items-center py-1 px-5 md:py-2 md:px-10 bg-primary rounded-full text-xl space-x-1"
+              className="inline-flex items-center py-2 px-5 md:py-3 md:px-10 bg-primary rounded-full md:rounded-xl text-xl space-x-1"
             >
-              <AiOutlineDownload className="w-7 h-7" />
+              {/* <AiOutlineDownload className="w-7 h-7" /> */}
               <p className="text-white">Download Resume</p>
             </a>
           </Link>

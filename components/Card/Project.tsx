@@ -27,12 +27,6 @@ const Project: FunctionComponent<ProjectProps> = ({ project }) => {
         <div className="absolute inset-0 bg-primary/20" />
         {show && (
           <motion.div
-            whileHover={{ opacity: [0, 1] }}
-            transition={{
-              duration: 0.25,
-              ease: "easeInOut",
-              staggerChildren: 0.5,
-            }}
             className="absolute inset-0 px-3 pt-5 pb-14 w-full h-full bg-dark-100/70 transition-all flex flex-col items-center justify-between space-y-3"
           >
             <p className="w-full text-sm text-left">{project.description}</p>

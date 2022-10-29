@@ -1,15 +1,9 @@
 import Head from "next/head";
 import { Fragment } from "react";
+import { Fab, Footer, Header, Notification } from "components";
+import { About, Contact, Hero, Portfolio, Technologies } from "sections";
+
 import type { NextPage } from "next";
-import {
-  About,
-  Contact,
-  Hero,
-  Home as HomeSection,
-  Portfolio,
-  Technologies,
-} from "sections";
-import { Fab, Footer, Header, Particles } from "components";
 
 const Home: NextPage = () => {
   return (
@@ -47,15 +41,13 @@ const Home: NextPage = () => {
         }}
       >
         <Header />
-        {/* <Particles /> */}
         <Hero />
-        {/* <HomeSection /> */}
         <About />
         <Portfolio />
         <Technologies />
         <Contact />
         <Fab />
-
+        <Notification />
         <Footer />
       </div>
     </Fragment>
@@ -63,4 +55,5 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
 
