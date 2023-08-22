@@ -1,4 +1,6 @@
-import { Tooltip } from "components";
+import { motion } from "framer-motion";
+
+import { fadeIn } from "utils/motion";
 
 import type { IDetails } from "interface";
 import type { FunctionComponent } from "react";
@@ -13,7 +15,9 @@ const Details: FunctionComponent<Props> = ({
   detail: { startDate, endDate, organization, position, location, description },
 }) => {
   return (
-    <div
+    <motion.div
+      variants={fadeIn("up", true)}
+      whileInView="whileInView"
       className={`${
         align === "end" && "lg:items-end"
       } py-1 lg:w-full flex flex-col flex-none snap-start whitespace-nowrap`}
@@ -25,7 +29,7 @@ const Details: FunctionComponent<Props> = ({
       </h4>
       <p className="text-sm lg:text-base">{position}</p>
       <span className="text-sm lg:text-base text-white">{location}</span>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,4 +1,7 @@
+import Image from "next/image";
 import { motion } from "framer-motion";
+
+import { fadeIn } from "utils/motion";
 
 import type { ITechnologies } from "interface";
 import type { FunctionComponent } from "react";
@@ -8,21 +11,23 @@ export type TechnologiesProps = {
 };
 
 const Technologies: FunctionComponent<TechnologiesProps> = ({
-  technology: { Icon, title, description },
+  technology: { image, title, description },
 }) => {
   return (
     <motion.div
-      whileInView={{ y: [100, 0], opacity: [0, 1], scale: [0, 1] }}
-      transition={{ duration: 0.7, ease: "easeInOut" }}
-      className="w-full p-3 bg-gray-100/50 rounded-xl flex items-start"
+      variants={fadeIn("up", true)}
+      whileInView="whileInView"
+      className="w-full p-3 bg-gray-100/50 rounded-xl flex items-center backdrop-blur-sm"
     >
-      {Icon && (
-        <div className="w-1/4 flex items-center justify-center">
-          <Icon className="w-14 h-14" />
+      {image && (
+        <div className="w-1/3 flex items-center justify-center">
+          <div className="relative w-28 h-28">
+            <Image src={image} alt={title} layout="fill" />
+          </div>
         </div>
       )}
 
-      <div className="w-3/4 flex flex-col items-start">
+      <div className="w-2/3 flex flex-col items-start">
         <h2>{title}</h2>
         <p>{description}</p>
       </div>

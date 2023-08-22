@@ -1,13 +1,11 @@
 import {
   AiOutlineTwitter,
-  AiOutlineLinkedin,
   AiOutlineGithub,
   AiFillLinkedin,
   AiOutlineInstagram,
 } from "react-icons/ai";
 
 const routes = [
-  // { name: "Home", path: "/" },
   { name: "About", path: "/#about" },
   { name: "Portfolio", path: "/#portfolio" },
   { name: "Technologies", path: "/#technologies" },
@@ -22,7 +20,7 @@ export const social = [
   },
   {
     name: "Twitter",
-    link: "https://github.com/Oluwayelu",
+    link: "https://twitter.com/Ife_YeLu",
     Icon: AiOutlineTwitter,
   },
   {
@@ -32,7 +30,7 @@ export const social = [
   },
   {
     name: "Instagram",
-    link: "https://github.com/Oluwayelu",
+    link: "https://instagram.com/ifeyelu_",
     Icon: AiOutlineInstagram,
   },
 ];

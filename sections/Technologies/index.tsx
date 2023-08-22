@@ -1,17 +1,22 @@
-import { Bar, Card } from "components";
+import { motion } from "framer-motion";
+
+import { stagger } from "utils/motion";
+import { Bar, Card, TypingText } from "components";
 import { technologies, skills } from "utils/DATA";
 
 import type { FunctionComponent } from "react";
 
 const Technologies: FunctionComponent = () => {
   return (
-    <div
+    <motion.div
       id="technologies"
-      className="relative w-full lg:max-w-7xl lg:mx-auto px-5 md:px-10 py-16 md:py-20"
+      initial="hidden"
+      whileInView="show"
+      variants={stagger}
+      className="relative w-full lg:max-w-7xl lg:mx-auto px-5 md:px-10 py-16 md:py-20 bg-primary-300/70"
     >
-      <h1 className="capitalize text-4xl lg:text-6xl text-left font-bold pb-5">
-        Technologies
-      </h1>
+      <TypingText title="Technologies" />
+
       <div className="space-y-3">
         <p className="w-full lg:w-1/2">
           I have worked with a range of technologies in the web developmet world
@@ -34,7 +39,7 @@ const Technologies: FunctionComponent = () => {
         {skills &&
           skills.map((skill, index) => <Bar key={index} skill={skill} />)}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

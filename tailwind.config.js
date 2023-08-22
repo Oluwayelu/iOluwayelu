@@ -33,6 +33,7 @@ module.exports = {
         success: "#6CC070",
         warning: "#F7B500",
       },
+      animation: { "bounce-slow": "bounce 2s infinite" },
     },
   },
   plugins: [],

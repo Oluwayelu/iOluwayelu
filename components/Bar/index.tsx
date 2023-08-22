@@ -1,5 +1,7 @@
+import Image from "next/image";
+
 import { motion } from "framer-motion";
-import { barVariant } from "variants";
+import { barVariant, fadeIn } from "utils/motion";
 
 import type { ISkill } from "interface";
 import type { FunctionComponent } from "react";
@@ -8,13 +10,28 @@ type Props = {
   skill: ISkill;
 };
 
-const Bar: FunctionComponent<Props> = ({ skill: { Icon, title, perct } }) => {
+const Bar: FunctionComponent<Props> = ({ skill: { icon, title, perct } }) => {
   const width = `${perct}%`;
   const bar = barVariant(width);
   return (
-    <div>
+    <motion.div
+      variants={fadeIn("up", true)}
+      whileInView="whileInView"
+      className="space-y-1"
+    >
       <div className="w-full flex items-center space-x-3">
-        {Icon && <Icon className="w-7 h-7" />}
+        {icon && (
+          <div className="w-8 h-8 flex items-center justify-center bg-white rounded-full">
+            <div className="relative w-4 h-4">
+              <Image
+                src={icon}
+                alt={title}
+                layout="fill"
+                className="w-full h-full"
+              />
+            </div>
+          </div>
+        )}
         <h4>{title}</h4>
       </div>
 
@@ -28,7 +45,7 @@ const Bar: FunctionComponent<Props> = ({ skill: { Icon, title, perct } }) => {
           style={{ width }}
         />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

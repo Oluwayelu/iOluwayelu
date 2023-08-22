@@ -1,12 +1,10 @@
-import { FaReact, FaDatabase, FaFigma } from "react-icons/fa";
-
 import type { IDetails, IProject, ISkill, ITechnologies } from "interface";
 
 export const projects: IProject[] = [
   {
     id: 1,
     name: "Easeit",
-    image: "/images/easeit.jpg",
+    image: "/images/projects/easeit.jpg",
     description:
       "Easit is a Non Profit organisation that helps the needy during the Covid Pandemic",
     category: ["html", "css", "node"],
@@ -15,7 +13,7 @@ export const projects: IProject[] = [
   {
     id: 2,
     name: "Netflix",
-    image: "/images/netflix.jpg",
+    image: "/images/projects/netflix.jpg",
     link: "https://ynetflix.netlify.app",
     code: "https://github.com/Oluwayelu/weather-app",
     description:
@@ -26,7 +24,7 @@ export const projects: IProject[] = [
   {
     id: 3,
     name: "Puzzles",
-    image: "/images/puzzles.jpg",
+    image: "/images/projects/puzzles.jpg",
     link: "https://puzzles.netlify.app",
     code: "https://github.com/Oluwayelu/puzzles",
     description: "A Picture Puzzle game",
@@ -36,7 +34,7 @@ export const projects: IProject[] = [
   {
     id: 4,
     name: "Accessoriess Hubb",
-    image: "/images/accessories-hubb.jpg",
+    image: "/images/projects/accessories-hubb.jpg",
     description: "An Ecommerce Store for Phone/Computer Accessories",
     category: ["next", "react", "tailwindcss", "mongodb", "node"],
     tags: ["Next", "Framer Motion", "Tailwind CSS"],
@@ -44,7 +42,7 @@ export const projects: IProject[] = [
   {
     id: 5,
     name: "YChatt",
-    image: "/images/ychatt.jpg",
+    image: "/images/projects/ychatt.jpg",
     link: "https://ychatt.netlify.app",
     code: "https://github.com/Oluwayelu/ychat-client",
     description: "A room messaging app built with react.js and node.",
@@ -54,7 +52,7 @@ export const projects: IProject[] = [
   {
     id: 6,
     name: "Snaple",
-    image: "/images/snaple.jpg",
+    image: "/images/projects/snaple.jpg",
     link: "https://snaple.netlify.app",
     code: "https://github.com/Oluwayelu/snaple",
     description:
@@ -65,7 +63,7 @@ export const projects: IProject[] = [
   {
     id: 7,
     name: "For.",
-    image: "/images/for.jpg",
+    image: "/images/projects/for.jpg",
     link: "https://yfor.netlify.app",
     code: "https://github.com/Oluwayelu/For.",
     description: "For. is a women fasion website",
@@ -75,7 +73,7 @@ export const projects: IProject[] = [
   {
     id: 8,
     name: "Casecraft",
-    image: "/images/casecraft.jpg",
+    image: "/images/projects/casecraft.jpg",
     link: "https://ycasecraft.netlify.app",
     code: "https://github.com/Oluwayelu/casecraft",
     description:
@@ -87,25 +85,25 @@ export const projects: IProject[] = [
 
 export const technologies: ITechnologies[] = [
   {
-    Icon: FaReact,
+    image: "/svg/frontend.svg",
     title: "Frontend",
-    description: "Experience with React.js",
+    description: "Experience with React.js and Next.js",
   },
   {
-    Icon: FaDatabase,
     title: "Backend",
+    image: "/svg/backend.svg",
     description: "Experience with Node.js and mongo DB",
   },
   {
-    Icon: FaFigma,
     title: "Ui/Ux",
+    image: "/svg/figma.svg",
     description: "Experience with Figma and Adobe XD",
   },
 ];
 
 export const educations: IDetails[] = [
   {
-    endDate: "Expected May, 2023",
+    endDate: "June, 2023",
     organization: "Univeristy of Lagos",
     position: "BSc. Systems Engineering",
     location: "Lagos, Nigeria",
@@ -116,6 +114,7 @@ export const educations: IDetails[] = [
 export const experiences: IDetails[] = [
   {
     startDate: "Oct, 2021",
+    endDate: "April, 2023",
     organization: "United States of Africa",
     position: "Frontend Engineering Lead",
     location: "Plano, Texas(Remote)",
@@ -141,88 +140,129 @@ export const experiences: IDetails[] = [
 
 export const skills: ISkill[] = [
   {
+    icon: "/svg/skills/react.svg",
     title: "React",
     perct: 90,
   },
   {
+    icon: "/svg/skills/node.svg",
     title: "Node",
     perct: 90,
   },
   {
+    icon: "/svg/skills/python.svg",
     title: "Python",
     perct: 90,
   },
   {
-    title: "Antd.",
-    perct: 70,
+    icon: "/svg/skills/css.svg",
+    title: "CSS",
+    perct: 90,
   },
 
   {
+    icon: "/svg/skills/nextjs.svg",
     title: "Next",
     perct: 80,
   },
   {
+    icon: "/svg/skills/express.svg",
     title: "Express",
     perct: 75,
   },
   {
+    icon: "/svg/skills/javascript.svg",
     title: "JavaScript",
     perct: 80,
   },
   {
-    title: "Material Ui",
+    icon: "/svg/skills/sass.svg",
+    title: "Sass",
     perct: 70,
   },
 
   {
+    icon: "/svg/skills/vue.svg",
+    title: "Vue",
+    perct: 50,
+  },
+  {
+    icon: "/svg/skills/firebase.svg",
+    title: "Firebase",
+    perct: 75,
+  },
+  {
+    icon: "/svg/skills/typescript.svg",
+    title: "Typescript",
+    perct: 80,
+  },
+  {
+    icon: "/svg/skills/less.svg",
+    title: "Less",
+    perct: 80,
+  },
+
+  {
+    icon: "/svg/skills/html5.svg",
     title: "HTML5",
     perct: 85,
   },
   {
+    icon: "/svg/skills/socket-io.svg",
     title: "Socket.io",
     perct: 65,
   },
   {
-    title: "Typescript",
+    icon: "/svg/skills/redux.svg",
+    title: "Redux",
     perct: 70,
   },
   {
+    icon: "/svg/skills/bootstrap.svg",
     title: "Bootstrap",
     perct: 90,
   },
 
   {
-    title: "CSS",
+    icon: "/svg/skills/docker.svg",
+    title: "Docker",
+    perct: 60,
+  },
+  {
+    icon: "/svg/skills/apollo.svg",
+    title: "Apollo graphql.",
+    perct: 60,
+  },
+  {
+    icon: "/svg/skills/mongodb.svg",
+    title: "Mongo DB",
     perct: 85,
   },
   {
-    title: "Firebase",
-    perct: 70,
-  },
-  {
-    title: "Mongo DB",
-    perct: 80,
-  },
-  {
+    icon: "/svg/skills/tailwind-css.svg",
     title: "Tailwind CSS",
     perct: 90,
   },
 
   {
-    title: "postgreSQL",
-    perct: 60,
+    icon: "/svg/skills/aws.svg",
+    title: "AWS",
+    perct: 50,
   },
   {
-    title: "Firebase Realtime",
-    perct: 60,
+    icon: "/svg/skills/graphql.svg",
+    title: "Graphql",
+    perct: 70,
   },
   {
-    title: "AWS Lambda",
-    perct: 30,
+    icon: "/svg/skills/postgresql.svg",
+    title: "Postgresql",
+    perct: 70,
   },
 
   {
-    title: "Docker",
-    perct: 40,
+    icon: "/svg/skills/material-ui.svg",
+    title: "Material Ui",
+    perct: 70,
   },
 ];

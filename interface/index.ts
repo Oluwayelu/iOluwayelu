@@ -27,7 +27,7 @@ export interface IProject {
 }
 
 export interface ITechnologies {
-  Icon: IconType;
+  image?: string;
   title: string;
   description: string;
 }
@@ -44,7 +44,7 @@ export interface IDetails {
 
 export interface ISkill {
   title: string;
-  Icon?: IconType;
+  icon?: string;
   perct: number;
 }
 

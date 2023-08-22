@@ -1,11 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { MdLocationOn } from "react-icons/md";
 import { FiPhoneCall, FiMail } from "react-icons/fi";
 
 import { social } from "routes";
-import { Input } from "components";
 import { useNotification } from "context";
+import { Input, TypingText } from "components";
+import { fadeIn, stagger } from "utils/motion";
 
 import type { Target } from "interface";
 import type { ChangeEventHandler, FunctionComponent } from "react";
@@ -71,14 +73,15 @@ const Contact: FunctionComponent = () => {
   };
 
   return (
-    <div
+    <motion.div
       id="contact-me"
+      initial="hidden"
+      whileInView="show"
+      variants={stagger}
       className="relative w-full py-16 md:py-20 bg-primary-300"
     >
       <div className="w-full lg:max-w-7xl lg:mx-auto px-5 md:px-10">
-        <h1 className="capitalize text-4xl lg:text-6xl text-left font-bold pb-5">
-          Contact Me
-        </h1>
+        <TypingText title="Contact Me" />
 
         <div className="w-full flex flex-col lg:flex-row justify-between lg:items-stretch lg:space-x-5">
           <div className="w-full space-y-3">
@@ -87,15 +90,21 @@ const Contact: FunctionComponent = () => {
               thing more visual or conceptual?
             </p>
 
-            <div className="w-full flex space-x-3 items-center">
+            <motion.div
+              variants={fadeIn()}
+              whileInView="whileInView"
+              className="w-full flex space-x-3 items-center"
+            >
               <div className="w-14 h-14 flex justify-center items-center rounded-full border border-white">
                 <MdLocationOn className="w-7 h-7" />
               </div>
 
               <p>Lagos, Nigeria</p>
-            </div>
+            </motion.div>
 
-            <a
+            <motion.a
+              variants={fadeIn()}
+              whileInView="whileInView"
               href="tel:+234 905 315 6229"
               className="w-full flex space-x-3 items-center"
             >
@@ -104,9 +113,11 @@ const Contact: FunctionComponent = () => {
               </div>
 
               <p>(+234) 905 315 6229</p>
-            </a>
+            </motion.a>
 
-            <a
+            <motion.a
+              variants={fadeIn()}
+              whileInView="whileInView"
               href="mailto:oluwayeluifeoluwa@gmail.com"
               className="w-full flex space-x-3 items-center"
             >
@@ -115,22 +126,31 @@ const Contact: FunctionComponent = () => {
               </div>
 
               <p>oluwayeluifeoluwa@gmail.com</p>
-            </a>
+            </motion.a>
 
             <h3 className="w-full text-center">Find Me On</h3>
 
             <ul className="w-full lg:hidden inline-flex justify-center space-x-3">
               {social.map(({ link, Icon }, index) => (
-                <li key={index}>
+                <motion.li
+                  variants={fadeIn("right", true)}
+                  whileInView="whileInView"
+                  key={index}
+                >
                   <a href={link} target="_blank" rel="noreferrer">
                     <Icon className=" hover:text-primary-300 w-7 h-7" />
                   </a>
-                </li>
+                </motion.li>
               ))}
             </ul>
           </div>
 
-          <form onSubmit={handleSubmit} className="w-full space-y-3">
+          <motion.form
+            variants={fadeIn("up", true)}
+            whileInView="whileInView"
+            onSubmit={handleSubmit}
+            className="w-full space-y-3"
+          >
             <div className="w-full flex flex-col lg:flex-row lg:space-x-4">
               <Input
                 name="name"
@@ -178,7 +198,7 @@ const Contact: FunctionComponent = () => {
             >
               {loading ? "Sending" : "Send"}
             </button>
-          </form>
+          </motion.form>
         </div>
       </div>
 
@@ -187,28 +207,34 @@ const Contact: FunctionComponent = () => {
           <div className="px-5 flex items-center justify-end w-3/4 h-12 bg-primary rounded-r-xl">
             <ul className="inline-flex space-x-3">
               {social.map(({ link, Icon }, index) => (
-                <li key={index}>
+                <motion.li
+                  variants={fadeIn("right", true)}
+                  whileInView="whileInView"
+                  key={index}
+                >
                   <a href={link} target="_blank" rel="noreferrer">
                     <Icon className=" hover:text-primary-300 w-7 h-7" />
                   </a>
-                </li>
+                </motion.li>
               ))}
             </ul>
           </div>
         </div>
 
         <div className="w-full">
-          <button
+          <motion.button
+            variants={fadeIn("up", true)}
+            whileInView="whileInView"
             type="submit"
             onClick={handleSubmit}
             disabled={!notEmpty}
             className="px-10 h-12 text-xl font-medium bg-primary rounded disabled:bg-primary/70 disabled:cursor-error"
           >
             Send
-          </button>
+          </motion.button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

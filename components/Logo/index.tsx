@@ -1,14 +1,34 @@
-import { FunctionComponent } from "react";
 import Image from "next/image";
+
+import type { FunctionComponent } from "react";
 
 type Props = {
   icon?: boolean;
   dark?: boolean;
+  size?: "sm" | "md" | "lg";
 };
 
-const LogoText: FunctionComponent<Props> = ({ icon, dark }) => {
+const LogoText: FunctionComponent<Props> = ({
+  icon = false,
+  size = "md",
+  dark,
+}) => {
+  const getSize = () => {
+    switch (size) {
+      case "sm":
+        return "w-20 h-5";
+      case "md":
+        return "w-40 h-10";
+      case "lg":
+        return "w-80 h-20";
+
+      default:
+        return "w-40 h-10";
+    }
+  };
+
   return (
-    <div className="relative w-40 h-10">
+    <div className={`${getSize()} relative`}>
       {icon ? (
         dark ? (
           <Image

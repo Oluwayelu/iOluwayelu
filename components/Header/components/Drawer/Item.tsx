@@ -1,8 +1,9 @@
-import { FunctionComponent } from "react";
-import { motion } from "framer-motion";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
-import { items } from "variants";
+import { items } from "utils/motion";
+
+import type { FunctionComponent } from "react";
 
 type ItemProps = {
   route: { name: string; path: string };

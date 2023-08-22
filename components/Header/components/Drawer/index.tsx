@@ -1,27 +1,16 @@
-import { FunctionComponent } from "react";
-import routes, { social } from "routes";
 import { motion } from "framer-motion";
+
+import { Logo } from "components";
+import routes, { social } from "routes";
+import { items, stagger } from "utils/motion";
+
 import { Item } from "./Item";
 
-import { items } from "variants";
-import { Logo } from "components";
+import type { FunctionComponent } from "react";
 
 type Props = {
   open: boolean;
   toggle: Function;
-};
-
-const variants = {
-  open: {
-    transition: {
-      staggerChildren: 0.07,
-      staggerDirection: 1,
-      delayChildren: 0.2,
-    },
-  },
-  closed: {
-    transition: { staggerChildren: 0.05, staggerDirection: -1 },
-  },
 };
 
 const Drawer: FunctionComponent<Props> = ({ open, toggle }) => (
@@ -33,12 +22,7 @@ const Drawer: FunctionComponent<Props> = ({ open, toggle }) => (
       open ? "block" : "hidden"
     } absolute px-5 pt-3 h-screen top-0 left-0 bottom-0 z-20 bg-primary`}
   >
-    <motion.ul
-      initial="closed"
-      animate="open"
-      exit="closed"
-      variants={variants}
-    >
+    <motion.ul initial="hidden" animate="show" exit="hidden" variants={stagger}>
       <Logo dark />
 
       <div className="h-[90vh] py-5 flex flex-col justify-between">

@@ -1,11 +1,26 @@
 import Head from "next/head";
-import { Fragment } from "react";
-import { Fab, Footer, Header, Notification } from "components";
+import { Fragment, useState, useEffect } from "react";
+import {
+  Fab,
+  Footer,
+  Header,
+  Loader,
+  Particles,
+  Notification,
+} from "components";
 import { About, Contact, Hero, Portfolio, Technologies } from "sections";
 
 import type { NextPage } from "next";
 
 const Home: NextPage = () => {
+  const [loading, setLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 10000);
+  }, [loading]);
+
   return (
     <Fragment>
       <Head>
@@ -34,26 +49,26 @@ const Home: NextPage = () => {
         <meta name="msapplication-navbutton-color" content="#0F1642" />
         <meta name="apple-mobile-web-app-status-bar-style" content="#0F1642" />
       </Head>
-      <div
-        className="relative w-full min-h-screen font-poppins bg-cover bg-center"
-        style={{
-          backgroundImage: "url('/images/confetti-background.png')",
-        }}
-      >
-        <Header />
-        <Hero />
-        <About />
-        <Portfolio />
-        <Technologies />
-        <Contact />
-        <Fab />
-        <Notification />
-        <Footer />
-      </div>
+
+      {loading ? (
+        <Loader />
+      ) : (
+        <div className="w-full min-h-screen font-poppins bg-cover bg-center">
+          <Header />
+          <Hero />
+          <About />
+          <Portfolio />
+          <Technologies />
+          <Contact />
+          <Fab />
+          <Notification />
+          <Footer />
+          <Particles />
+        </div>
+      )}
     </Fragment>
   );
 };
 
 export default Home;
-
 
