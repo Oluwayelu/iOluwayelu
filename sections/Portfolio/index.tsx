@@ -49,23 +49,56 @@ const Portfolio: FunctionComponent = () => {
             filterCategory={handleFilterCategory}
           />
           {projectsData.length > 0 ? (
-            <motion.div
-              animate={animateCard}
-              transition={{ duration: 0.5, delayChildren: 0.5 }}
-              className={`${
-                projectsData.length > 3 ? "min-h-[90vh]" : "min-h-[50vh]"
-              } w-full flex lg:flex-row flex-col lg:min-h-0 gap-5`}
-            >
-              {projectsData.map((project, index) => (
-                <Card
-                  type="project"
-                  key={index}
-                  show={show}
-                  setShow={setShow}
-                  data={project}
-                />
-              ))}
-            </motion.div>
+            <div className="w-full flex flex-col items-center gap-5">
+              <motion.div
+                animate={animateCard}
+                transition={{ duration: 0.5, delayChildren: 0.5 }}
+                className={`${
+                  projectsData.length > 3 ? "min-h-[90dvh]" : "min-h-[50vh]"
+                } w-full flex lg:flex-row flex-col lg:min-h-0 gap-5`}
+              >
+                {projectsData
+                  .slice(
+                    0,
+                    projectsData.length > 7
+                      ? Math.floor(projectsData.length / 2)
+                      : projectsData.length
+                  )
+                  .map((project, index) => (
+                    <Card
+                      type="project"
+                      key={index}
+                      show={show}
+                      setShow={setShow}
+                      data={project}
+                    />
+                  ))}
+              </motion.div>
+              {projectsData.length > 7 && (
+                <motion.div
+                  animate={animateCard}
+                  transition={{ duration: 0.5, delayChildren: 0.5 }}
+                  className={`${
+                    projectsData.length > 3 ? "min-h-[90vh]" : "min-h-[50vh]"
+                  } w-full flex lg:flex-row flex-col lg:min-h-0 gap-5`}
+                >
+                  {projectsData
+                    .slice(
+                      Math.floor(projectsData.length / 2),
+                      projectsData.length
+                    )
+                    .map((project, index) => (
+                      <Card
+                        type="project"
+                        key={index}
+                        show={show}
+                        setShow={setShow}
+                        data={project}
+                      />
+                    ))}
+                </motion.div>
+              )}
+            </div>
           ) : (
             <motion.p
               whileInView={{ y: [100, 0], opacity: [0, 1] }}

@@ -15,10 +15,10 @@ const Hero: FunctionComponent = () => {
     >
       <div className="absolute left-0 right-0 bottom-0 w-full h-1 bg-white" />
       <div className="absolute -left-3  bottom-0 w-1/4 md:w-1/6 h-full flex items-center justify-center z-0">
-        <p className="-rotate-90 text-[100px] md:text-[150px]">Oluwayelu</p>
+        <p className="-rotate-90 text-[75px] md:text-[150px]">Oluwayelu</p>
       </div>
       <div className="absolute right-0 -bottom-5 w-full h-1/4 flex items-center justify-center z-0">
-        <p className=" text-[100px] md:text-[150px]">Ifeoluwa</p>
+        <p className=" text-[75px] md:text-[150px]">Ifeoluwa</p>
       </div>
       <div className="absolute inset-0 w-full h-full bg-primary-300/70 z-10" />
 

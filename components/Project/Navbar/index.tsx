@@ -24,7 +24,7 @@ const Navbar: FunctionComponent<Props> = ({ active, filterCategory }) => {
         active={active}
       />
       <NavItem
-        value="material-ui"
+        value="socket.io"
         filterCategory={filterCategory}
         active={active}
       />

@@ -156,14 +156,14 @@ export const options: ISourceOptions = {
     bounce: {
       horizontal: {
         random: {
-          enable: false,
+          enable: true,
           minimumValue: 0.1,
         },
         value: 1,
       },
       vertical: {
         random: {
-          enable: false,
+          enable: true,
           minimumValue: 0.1,
         },
         value: 1,
@@ -176,21 +176,21 @@ export const options: ISourceOptions = {
       bounce: {
         horizontal: {
           random: {
-            enable: false,
+            enable: true,
             minimumValue: 0.1,
           },
           value: 1,
         },
         vertical: {
           random: {
-            enable: false,
+            enable: true,
             minimumValue: 0.1,
           },
           value: 1,
         },
       },
       enable: false,
-      maxSpeed: 50,
+      maxSpeed: 20,
       mode: "bounce",
       overlap: {
         enable: true,
@@ -202,16 +202,16 @@ export const options: ISourceOptions = {
       animation: {
         h: {
           count: 0,
-          enable: false,
+          enable: true,
           offset: 0,
-          speed: 20,
+          speed: 2,
           delay: 0,
           decay: 0,
           sync: true,
         },
         s: {
           count: 0,
-          enable: false,
+          enable: true,
           offset: 0,
           speed: 1,
           delay: 0,
@@ -220,7 +220,7 @@ export const options: ISourceOptions = {
         },
         l: {
           count: 0,
-          enable: false,
+          enable: true,
           offset: 0,
           speed: 1,
           delay: 0,
@@ -466,7 +466,7 @@ export const options: ISourceOptions = {
         opacity: 1,
       },
       particles: {
-        enable: false,
+        enable: true,
         frequency: 0.05,
         opacity: 1,
       },

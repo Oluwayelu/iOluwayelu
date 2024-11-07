@@ -33,6 +33,7 @@ const Contact: FunctionComponent = () => {
 
   const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
+    console.log(loading, info);
 
     if (notEmpty) {
       setLoading(true);
@@ -50,7 +51,7 @@ const Contact: FunctionComponent = () => {
           console.log(error);
           setType("error");
           setMessage(error);
-
+          setLoading(false);
           return;
         }
 
@@ -193,7 +194,7 @@ const Contact: FunctionComponent = () => {
             <button
               type="submit"
               onClick={handleSubmit}
-              disabled={!notEmpty}
+              disabled={!notEmpty || loading}
               className="lg:hidden px-10 h-12 text-xl font-medium bg-primary rounded disabled:bg-primary/70"
             >
               {loading ? "Sending" : "Send"}

@@ -13,6 +13,7 @@ export type Category =
   | "mongodb"
   | "firebase"
   | "tailwindcss"
+  | "socket.io"
   | "styled-component";
 
 export interface IProject {
